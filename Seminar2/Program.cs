@@ -1,4 +1,4 @@
-﻿//!!Первая задача!!
+﻿//                                                  !!Первая задача семинара!!
 //Console.Write("Введите два числа через пробел");
 //string[] input = Console.ReadLine().Split();
 //
@@ -9,7 +9,7 @@
 //    Console.WriteLine($"{b} кратно {a}");
 //else 
 //    Console.WriteLine($"Остаток от деления {b} на {a}: {b % a}");
-//                                                   !!вторая задача!!                    закомментарить сразу несколько строк - ctrl+/
+//                                                   !!вторая задача семинара!!                    закомментарить сразу несколько строк - ctrl+/
 // Console.Write("Введите число: ");
 // int num = int.Parse(Console.ReadLine());
 
@@ -17,7 +17,7 @@
 //     Console.WriteLine($"{num} кратно и 7 и 23");
 // else 
 //     Console.WriteLine($"{num} не кратно и 7 и 23");
-//                                                  !!третья задача!!
+//                                                  !!третья задача семинара!!
 Console.Write("Введите первое число: ");
 int num1 = int.Parse(Console.ReadLine());
 Console.Write("Введите второе число: ");
