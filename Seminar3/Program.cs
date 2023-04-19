@@ -47,6 +47,8 @@
 // Console.WriteLine("Таблица квадратов чисел от 1 до " + n +":");
 //     for (int i = 1; i <= n; i++)
 //         Console.WriteLine(i + " * " + i + " = " + (i * i));
+
+//                                                                  Задачи Домашнего задания
 //                              Задача 1 (Палиндром)
 // Console.WriteLine("Введите пятизначное число: ");
 //  int num = Convert.ToInt32(Console.ReadLine());
