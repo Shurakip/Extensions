@@ -55,29 +55,29 @@
 
 //                              Задачи домашнего задания
 //                              Задача 1 А в степени В
-// Console.Write("Введите число А: ");
-// int a = int.Parse(Console.ReadLine());
+Console.Write("Введите число А: ");
+int a = int.Parse(Console.ReadLine());
 
-// Console.Write("Введите число B: ");
-// int b = int.Parse(Console.ReadLine());
+Console.Write("Введите число B: ");
+int b = int.Parse(Console.ReadLine());
 
-// int result = 1;
-// for (int i = 0; i < b; i++)
-// {
-//     result *= a;
-// }
-// Console.WriteLine($"{a} в степени {b} = {result}");
+int result = 1;
+for (int i = 0; i < b; i++)
+{
+    result *= a;
+}
+Console.WriteLine($"{a} в степени {b} = {result}");
 
 //                              Задача 2 Сумма цифр числа
-// Console.Write("Введите число: ");
-//  int num = int.Parse(Console.ReadLine());
+Console.Write("Введите число: ");
+ int num = int.Parse(Console.ReadLine());
 
-//  int sum = 0;
-//  while (num != 0)
-//  {
-//     sum += num % 10;
-//     num /= 10;
-//  }
+ int sum = 0;
+ while (num != 0)
+ {
+    sum += num % 10;
+    num /= 10;
+ }
 //  Console.WriteLine($"Сумма цифр в числе = {sum}");
 
 //                              Задача 3 
