@@ -4,7 +4,7 @@
 void FillArray(int[] numbers, int minValue = -9, int maxValue = 9) //Метод заполнения массива
 {
    maxValue++;
-   Random rnd = new Random();
+   Random rnd = new Random(); //  случайные числа
 
    for (int i = 0; i < numbers.Length; i++)
    {
@@ -21,7 +21,28 @@ void PrintArray(int[] numbers) // Метод печати массива
    Console.WriteLine();
 }
 
-int FindSumPosElements(int[] numbers)
+void FillArrayDouble(double[] numbers, double minValue = -9, double maxValue = 9) //Метод заполнения массива
+{
+   
+   Random rnd = new Random(); //  случайные числа
+
+   for (int i = 0; i < numbers.Length; i++)
+   {
+   double randomValue = minValue + (maxValue - minValue) * rnd.NextDouble();
+   numbers[i] = randomValue;
+   }
+}
+
+void PrintArrayDouble(double[] numbers) // Метод печати массива
+{
+   for (int i = 0; i < numbers.Length; i++)
+   {
+    Console.Write($"{numbers[i]} ");
+   }
+   Console.WriteLine();
+}
+
+int FindSumPosElements(int[] numbers) // найти положительные элементы
 {
    int sum = 0;
    for (int i = 0; i < numbers.Length; i++)
@@ -32,7 +53,7 @@ int FindSumPosElements(int[] numbers)
    return sum;
 }
 
-int FindSumNegElements(int[] numbers)
+int FindSumNegElements(int[] numbers) //  найти отрицательные элементы
 {
    int sum = 0;
    for (int i = 0; i < numbers.Length; i++)
@@ -169,4 +190,79 @@ void Task5()
       Console.WriteLine($"Число без пары - {numbers[halfSize]}");
    }
 }
-Task5();
+// Task5();
+//                                  Задачи домашнего задания
+// Задайте массив заполненный случайными положительными трёхзначными числами. Напишите программу, 
+// которая покажет количество чётных чисел в массиве.
+// [345, 897, 568, 234] -> 2
+void Dz1()
+{
+   int size = 10; 
+   int[] numbers = new int[size]; 
+   int count = 0;
+
+   FillArray(numbers, 100, 999); 
+   PrintArray(numbers);
+
+   foreach (int num in numbers)
+   {
+      if (num % 2 == 0)
+      {
+         count++;
+      }
+   }
+
+   Console.WriteLine("Количество четных чисел в массиве: " + count);
+}
+
+//Dz1();
+
+// Задайте одномерный массив, заполненный случайными числами. Найдите сумму элементов с нечётными индексами.
+void DZ2()
+{
+   int size = 10; 
+   int[] numbers = new int[size]; 
+   int sum = 0;
+
+   FillArray(numbers, -100, 100); 
+   PrintArray(numbers);
+
+   for (int i = 1; i < numbers.Length; i += 2)
+   {
+      sum += numbers[i];
+   }
+
+   Console.WriteLine("Сумма элементов с нечетными индексами = " + sum);
+
+}
+
+//DZ2();
+
+//   Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементами массива.
+void Dz3()
+{
+   int size = 10; 
+   double[] numbers = new double[size]; 
+   double min = numbers[0];
+   double max = numbers[0];
+  
+   FillArrayDouble(numbers, -100, 100); 
+   PrintArrayDouble(numbers);
+   
+   for (int i = 1; i < numbers.Length; i++)
+   {
+      if (numbers[i] < min)
+      {
+         min = numbers[i];
+      }
+      if (numbers[i] > max)
+      {
+         max = numbers[i];
+      }
+   }
+   double diff = max - min;
+   Console.WriteLine($"Разница между максимальным ({max}) и минимальным ({min}) элементами массива: {diff}");
+
+}
+
+Dz3();
