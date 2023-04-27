@@ -241,12 +241,12 @@ void DZ2()
 //   Задайте массив вещественных чисел. Найдите разницу между максимальным и минимальным элементами массива.
 void Dz3()
 {
-   int size = 10; 
+   int size = 5; 
    double[] numbers = new double[size]; 
    double min = numbers[0];
    double max = numbers[0];
   
-   FillArrayDouble(numbers, -100, 100); 
+   FillArrayDouble(numbers, -10, 10); 
    PrintArrayDouble(numbers);
    
    for (int i = 1; i < numbers.Length; i++)
